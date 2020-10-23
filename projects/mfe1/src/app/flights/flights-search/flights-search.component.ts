@@ -1,4 +1,5 @@
 import {Component, ViewChild, ViewContainerRef, Inject, Injector, ComponentFactoryResolver, OnInit} from '@angular/core';
+import {SharedService} from 'shared';
 
 
 @Component({
@@ -12,7 +13,8 @@ export class FlightsSearchComponent {
 
   constructor(
     @Inject(Injector) private injector,
-    @Inject(ComponentFactoryResolver) private cfr) { }
+    @Inject(ComponentFactoryResolver) private cfr,
+    private shared: SharedService) { }
 
   search() {
     alert('Not implemented for this demo!');
